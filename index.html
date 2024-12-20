@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=monospace" rel="stylesheet">
   <meta name="Author" content="lxrdk1773n">
   <meta name="copyright" content="lxrdk1773n">
-  <meta name="description" content="Owned By lxrdk1773n">
+  <meta name="description" content="Owned by lxrdk1773n">
   <style>
         html, body {
             height: 100%;
@@ -19,6 +19,7 @@
             text-align: center;
             font-family: 'monospace', monospace;
             user-select: none;
+	    cursor: none;
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -70,6 +71,27 @@
 
             .info-container {
                 font-size: 1rem;
+            }
+        }
+
+        .smoke {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, rgba(120, 6, 6, 0.8) 0%, rgba(136, 8, 8, 0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: fade 1.5s ease-out forwards;
+        }
+
+        @keyframes fade {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(13);
+                opacity: 0;
             }
         }
 
@@ -308,8 +330,7 @@
       <div id="0b7bed6e6630029afc407b19c22aedef">Fetching IP...</div>
       <div id="userAgentContainer">Fetching User Agent...</div>
     </div>
-    <marquee scrollamount="10">⛧ Greetz: K4N6P0L3Z | Z1GZ4G | NC3XP34 | KUR0R0 | SANANTHA | AUDY | CiYA | PANDA | 0MB4RB3R | 3M4NZ | BL0W | P00RS3CUR1TY | KH&amp;7HUN6 | GUN9L3R | YOU ⛧</marquee>
-    <br>
+    <marquee scrollamount="10">⛧ Greetz: K4N6P0L3Z | Z1GZ4G | NC3XP34 | KUR0R0 | SANANTHA | AUDY | CiYA | PANDA | 0MB4RB3R | 3M4NZ | BL0W | P00RS3CUR1TY | KH&amp;7HUN6 | GUN9L3R | YOU ⛧</marquee><br>
     <a href="mailto:zm3y_gorynych@proton.me" class="btn btn-contact">Contact</a>
   </div>
   <script>
@@ -317,6 +338,18 @@
       const audio = document.querySelector("audio");
       audio.play();
     }
+
+    document.addEventListener('mousemove', (e) => {
+        const smoke = document.createElement('div');
+        smoke.classList.add('smoke');
+        smoke.style.left = `${e.pageX}px`;
+        smoke.style.top = `${e.pageY}px`;
+        document.body.appendChild(smoke);
+
+        setTimeout(() => {
+            smoke.remove();
+        }, 1500); // Remove after animation
+    });
 
     function showTime() {
       const now = new Date();
