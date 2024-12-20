@@ -2,12 +2,12 @@
       const audio = document.querySelector("audio");
       audio.play();
     }
+    
    document.addEventListener("DOMContentLoaded", function() {
     document.body.classList.add("loading");
-
-    window.onload = function() {
-      document.getElementById("loading-screen").style.display = "none";
-      document.body.classList.remove("loading");
+      window.onload = function() {
+       document.getElementById("loading-screen").style.display = "none";
+        document.body.classList.remove("loading");
     };
   });
 
