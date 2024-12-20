@@ -76,7 +76,6 @@
   </style>
 </head>
 <body onclick="playSound()">
-  </div>
   <audio src="/assets/file/music.mp3" autoplay loop></audio>
     <div align="center">
     <pre style="font: 1px/1px monospace; text-shadow: 1px 1px 1px #000; background: rgba(0, 0, 0, 0); overflow-x: hidden; overflow-y: hidden; border: none; color: #980002;">
@@ -318,14 +317,6 @@
       const audio = document.querySelector("audio");
       audio.play();
     }
-   document.addEventListener("DOMContentLoaded", function() {
-    document.body.classList.add("loading");
-
-    window.onload = function() {
-      document.getElementById("loading-screen").style.display = "none";
-      document.body.classList.remove("loading");
-    };
-  });
 
     function showTime() {
       const now = new Date();
