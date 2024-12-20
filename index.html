@@ -5,133 +5,12 @@
   <meta charset="UTF-8">
   <title>&#1203;&#824;&#1202;&#824;&#1203; lxrdk1773n &#1203;&#824;&#1202;&#824;&#1203;</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="icon" type="image/png" href="/assets/img/icon.png">
+  <link rel="icon" type="image/png" href="https://sukynet.us.to/uhh/icon.jfif">
   <link href="https://fonts.googleapis.com/css?family=monospace" rel="stylesheet">
+  <link rel="stylesheet" href="https://mdcclxxiii.github.io/assets/css/styles.css">
   <meta name="Author" content="lxrdk1773n">
   <meta name="copyright" content="lxrdk1773n">
   <meta name="description" content="Owned by lxrdk1773n">
-  <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 5px;
-            overflow: hidden;
-            text-align: center;
-            font-family: 'monospace', monospace;
-            user-select: none;
-	    cursor: none;
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        body {
-            background-image: url('https://mdcclxxiii.github.io/assets/img/dekstop.jpg');
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #780606;
-        }
-
-        .info-container {
-            font-size: 1.2rem;
-        }
-
-        h1, p {
-            text-shadow: 2px 2px 2px #000;
-        }
-
-        marquee {
-            margin: 20px 0;
-        }
-
-        .btn-contact {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 20px;
-            background-color: #780606;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .btn-contact:hover {
-            background-color: #b01010;
-            transform: scale(1.05);
-        }
-	
-        #loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .spinner {
-            border: 8px solid #f3f3f3;
-            border-top: 8px solid #780606;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        body.loading {
-            overflow: hidden;
-        }
-  
-
-
-        @media (max-width: 1200px) {
-            body {
-                background-image: url('https://mdcclxxiii.github.io/assets/img/mobile.jpg');
-            }
-
-            .info-container {
-                font-size: 1rem;
-            }
-        }
-
-        .smoke {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background: radial-gradient(circle, rgba(120, 6, 6, 0.8) 0%, rgba(136, 8, 8, 0) 70%);
-            border-radius: 50%;
-            pointer-events: none;
-            animation: fade 1.5s ease-out forwards;
-        }
-
-        @keyframes fade {
-            0% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(13);
-                opacity: 0;
-            }
-        }
-
-  </style>
 </head>
 <body onclick="playSound()">	
     <div id="loading-screen">
@@ -372,59 +251,6 @@
     <marquee scrollamount="10">⛧ Greetz: K4N6P0L3Z | Z1GZ4G | NC3XP34 | KUR0R0 | SANANTHA | AUDY | CiYA | PANDA | 0MB4RB3R | 3M4NZ | BL0W | P00RS3CUR1TY | KH&amp;7HUN6 | GUN9L3R | YOU ⛧</marquee><br>
     <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%7A%6D%33%79%5F%67%6F%72%79%6E%79%63%68%40%70%72%6F%74%6F%6E%2C%6D%65" class="btn btn-contact">Contact</a>
   </div>
-  <script>
-    function playSound() {
-      const audio = document.querySelector("audio");
-      audio.play();
-    }
-    
-   document.addEventListener("DOMContentLoaded", function() {
-    document.body.classList.add("loading");
-      window.onload = function() {
-       document.getElementById("loading-screen").style.display = "none";
-        document.body.classList.remove("loading");
-    };
-  });
-
-    document.addEventListener('mousemove', (e) => {
-        const smoke = document.createElement('div');
-        smoke.classList.add('smoke');
-        smoke.style.left = `${e.pageX}px`;
-        smoke.style.top = `${e.pageY}px`;
-        document.body.appendChild(smoke);
-
-        setTimeout(() => {
-            smoke.remove();
-        }, 1500); // Remove after animation
-    });
-
-    function showTime() {
-      const now = new Date();
-      const hours = String(now.getHours() % 12 || 12).padStart(2, '0');
-      const minutes = String(now.getMinutes()).padStart(2, '0');
-      const seconds = String(now.getSeconds()).padStart(2, '0');
-      const ampm = now.getHours() < 12 ? 'AM' : 'PM';
-      document.getElementById('lxrd').innerText = `${hours}:${minutes}:${seconds} ${ampm}`;
-    }
-
-    async function fetchIP() {
-      try {
-        const response = await fetch('https://api.ipify.org?format=json');
-        const data = await response.json();
-        document.getElementById('0b7bed6e6630029afc407b19c22aedef').innerText = `Your IP: ${data.ip}`;
-      } catch (error) {
-        document.getElementById('0b7bed6e6630029afc407b19c22aedef').innerText = 'Error Fetching IP';
-      }
-    }
-
-    function fetchUserAgent() {
-      const userAgent = navigator.userAgent;
-      document.getElementById('userAgentContainer').innerText = `User Agent: ${userAgent}`;
-    }
-
-    setInterval(showTime, 500);
-    fetchIP();
-    fetchUserAgent();
-  </script>
+  <script src="https://mdcclxxiii.github.io/assets/js/script.js"></script>
 </body>
 </html>
