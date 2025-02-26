@@ -1,0 +1,168 @@
+    html {
+      height: 100%;
+      width: 100%;
+      padding: 20px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    body {
+      background: #101010;
+      color: #ffadad;
+      font-family: "Buda", serif;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      cursor: none;
+      user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -khtml-user-select: none;
+      -webkit-user-select: none;
+    }
+
+    @keyframes glitch {
+      0% {
+        transform: translate(0);
+      }
+
+      20% {
+        transform: translate(-2px, -2px);
+      }
+
+      40% {
+        transform: translate(2px, -2px);
+      }
+
+      60% {
+        transform: translate(-2px, 2px);
+      }
+
+      80% {
+        transform: translate(2px, 2px);
+      }
+
+      100% {
+        transform: translate(0);
+      }
+    }
+
+    .info-container {
+      font-size: 1.5rem;
+    }
+
+    h1 {
+      text-shadow: 2px 2px 2px #000;
+      font-family: "Buda", serif;
+    }
+
+    p {
+      text-shadow: 2px 2px 2px #000;
+      animation: glitch 1s infinite;
+    }
+
+    marquee {
+      margin: 10px;
+    }
+
+    .btn-contact {
+      display: inline-block;
+      padding: 5px 20px;
+      margin-top: 10px;
+      background-color: #ffadad;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.5rem;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn-contact:hover {
+      background-color: #f98072;
+      transform: scale(1.05);
+    }
+
+    #loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .spinner {
+      border: 8px solid #202020;
+      border-top: 8px solid #ffadad;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    body.loading {
+      overflow: hidden;
+    }
+
+    @media (max-width: 1200px) {
+      body {
+        background: #101010;
+      }
+
+      .info-container {
+        font-size: 1.2rem;
+      }
+    }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+    .smoke {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: radial-gradient(circle, rgba(120, 60, 60, 0.5) 5%, rgba(136, 80, 80, 0) 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: fade 1.5s ease-out forwards;
+    }
+
+    @keyframes fade {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(13);
+        opacity: 0;
+      }
+    }
